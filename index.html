@@ -1,1 +1,180 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Valentin Manceaux-Panot</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<style type="text/css">
+		body {
+			background-color: #E8E8E7;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		#content { 
+		    max-width: 1366px;
+		    margin: auto;
+		}
+
+		h1, h2, h3, h4 {
+			font-weight: normal;
+		}
+
+		h3 {
+			padding-bottom: 1em;
+			border-bottom: 2px solid #CBCBCB;
+		}
+
+		h4 {
+			margin: 0px;
+			padding: 0px;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		.brick {
+		    display: inline-block;
+		    margin: 0 0 1em;
+		    width: 100%;
+			border: solid 1px #CBCBCB;
+		}
+
+		.brick > * {
+			padding: 16px;
+			margin: 0px;
+		}
+
+		#personal {
+			width: 350px;
+			float: left;
+		}
+
+		#description {
+			margin-left: 380px;
+			max-width: 986px;
+		}
+
+		#personal, #personal a {
+			color: #FFF;
+		}
+
+		#personal a {
+			text-decoration: none;
+		}
+
+		#personal a:hover {
+			text-decoration: underline;
+		}
+
+		#profile {
+			background-color: #616161;
+		}
+
+		#network {
+			background-color: #468FCD;
+		}
+
+		#skills, #experiences {
+			background-color: #FFF;
+		}
+
+		.icon {
+			max-width: 1em;
+			max-height: 1em;
+			margin-right: 0.25em;
+			vertical-align: middle;
+		}
+
+		.detail {
+			padding-left: 2em;
+		}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div id="personal">
+			<div class="brick" id="profile">
+				<h1>Valentin<br/>Manceaux-Panot</h1>
+				<h2>Développeur</h2>
+			</div>
+
+			<div class="brick" id="network">
+				<h3>Contact</h3>
+				<ul>
+					<li><a href="mailto:va.mcxp@gmail.com"><img src="img/mail.png" class="icon"/>va.mcxp@gmail.com</a></li>
+					<li><a href="https://www.linkedin.com/in/valentin-manceaux-panot-0b160a67"><img src="img/linkedin.png" class="icon"/>LinkedIn</a></li>
+					<li><a href="https://twitter.com/euregan"><img src="img/twitter.png" class="icon"/>Twitter</a></li>
+					<li><a href="https://github.com/euregan"><img src="img/github.png" class="icon"/>Github</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="description">
+			<div class="brick" id="skills">
+				<h3>Compétences</h3>
+
+				<div id="languages">
+					<h4>Langages</h4>
+					<ul>
+						<li>Javascript</li>
+						<li>PHP</li>
+						<li>C# & VB</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="brick" id="experiences">
+				<h3>Expériences</h3>
+				<ul>
+					<li>
+						<h4>Kalidea</h4>
+						<div class="detail">
+							<div>Septembre 2014 - Aujourd'hui</div>
+							<div>Développeur</div>
+						</div>
+					</li>
+					<li>
+						<h4>plugmystore</h4>
+						<div class="detail">
+							<div>Avril 2014 - Aout 2014</div>
+							<div>Développeur</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		function ajax(url, callback, options) {
+			if (typeof callback != 'function') {
+				options = callback
+				callback = undefined
+			}
+
+			options = options || {}
+			options.method = options.method || 'GET'
+
+			var httpRequest = new XMLHttpRequest()
+
+			if (httpRequest) {
+				httpRequest.onreadystatechange = function() {
+					if (httpRequest.readyState === XMLHttpRequest.DONE) {
+						if (httpRequest.status === 200) {
+							if (callback) callback(httpRequest.responseText);
+						} else {
+							console.warn('There was a problem with the request.')
+						}
+					}
+				}
+				httpRequest.open(options.method, url)
+				httpRequest.send()
+			} else {
+				console.warn('Giving up :( Cannot create an XMLHTTP instance')
+			}
+		}
+	</script>
+</body>
+</html>
