@@ -17,7 +17,6 @@
 		}
 
 		h1, h2, h3, h4 {
-			font-weight: normal;
 			font-family: arial;
 		}
 
@@ -94,6 +93,8 @@
 
 		.detail {
 			padding-left: 2em;
+			margin-top: 1em;
+			margin-bottom: 1em;
 		}
 
 		table {
@@ -104,38 +105,17 @@
 			cursor: pointer;
 		}
 
-		label:after, input:checked + label:after {
-			content: '∨';
-			width: 16px;
-			height: 16px;
-			margin-left: 5px;
-			font-weight: bold;
-			color: #468FCD;
-		}
-
-		input:checked + label:after {
-			content: '∧';
-		}
-
 		input[type=checkbox] {
 			display: none;
 		}
 
-		label:hover {
-			color: #468FCD;
-		}
-
-		label + ul {
-			overflow: hidden;
-			height: 0px;
-		}
-
-		input:checked + label + ul {
-			height: auto;
-		}
-
 		tr {
 			vertical-align: top;
+		}
+
+		h5 {
+			margin-top: 0px;
+			margin-bottom: 0px;
 		}
 	</style>
 </head>
@@ -144,7 +124,7 @@
 		<div id="personal">
 			<div class="brick" id="profile">
 				<h1>Valentin<br/>Manceaux-Panot</h1>
-				<h2>Développeur</h2>
+				<h2>Développeur web</h2>
 			</div>
 
 			<div class="brick" id="network">
@@ -160,14 +140,6 @@
 					<li><a href="https://github.com/euregan"><img src="img/github.png" class="icon"/>Github</a></li>
 				</ul>
 			</div>
-
-			<!--<div class="brick" id="filters">
-				<h3>Poste</h3>
-				<ul>
-					<li><label><input type="checkbox">Développeur frontend</label></li>
-					<li><label><input type="checkbox">Développeur backend</label></li>
-				</ul>
-			</div> -->
 		</div>
 
 		<div id="description">
@@ -180,8 +152,7 @@
 							<h4>Langages</h4>
 							<ul>
 								<li>
-									<input type="checkbox" id="js">
-									<label for="js">Javascript</label>
+									<h5>Javascript</h5>
 									<ul>
 										<li>React</li>
 										<li>jQuery</li>
@@ -189,8 +160,7 @@
 									</ul>
 								</li>
 								<li>
-									<input type="checkbox" id="php">
-									<label for="php">PHP</label>
+									<h5 for="php">PHP</h5>
 									<ul>
 										<li>Zend Framework 2</li>
 										<li>Doctrine</li>
@@ -198,8 +168,7 @@
 									</ul>
 								</li>
 								<li>
-									<input type="checkbox" id="ms">
-									<label for="ms">C# & VB</label>
+									<h5 for="ms">C# & VB</h5>
 									<ul>
 										<li>WPF</li>
 										<li>ASP.NET</li>
@@ -207,7 +176,7 @@
 										<li>WinForm</li>
 									</ul>
 								</li>
-								<li>Shell</li>
+								<li><h5>Shell</h5></li>
 							</ul>
 						</td>
 
@@ -215,15 +184,14 @@
 							<h4>Bases de données</h4>
 							<ul>
 								<li>
-									<input type="checkbox" id="sql">
-									<label for="sql">SQL</label>
+									<h5 for="sql">SQL</h5>
 									<ul>
 										<li>MySQL</li>
 										<li>SQLite</li>
 										<li>MS SQL</li>
 									</ul>
 								</li>
-								<li>MongoDB</li>
+								<li><h5>MongoDB</h5></li>
 							</ul>
 						</td>
 					</tr>
@@ -232,16 +200,16 @@
 						<td id="os">
 							<h4>Plateformes</h4>
 							<ul>
-								<li>Linux</li>
-								<li>Windows</li>
+								<li><h5>Linux</h5></li>
+								<li><h5>Windows</h5></li>
 							</ul>
 						</td>
 
 						<td id="servers">
 							<h4>Serveurs</h4>
 							<ul>
-								<li>Apache 2</li>
-								<li>Node</li>
+								<li><h5>Apache 2</h5></li>
+								<li><h5>Node</h5></li>
 							</ul>
 						</td>
 					</tr>
@@ -253,18 +221,18 @@
 				<ul>
 					<li>
 						<h4>Kalidea</h4>
+						<h5>Septembre 2014 - Aujourd'hui</h5>
 						<div class="detail">
-							<div>Septembre 2014 - Aujourd'hui</div>
-							<div>Développeur</div>
+							<h5>Développeur</h5>
 							<div>Édition d'un logiciel de comptabilité et de gestion d'activités pour les CE</div>
 							<div>Développement et maintenance de fonctionnalités.</div>
 						</div>
 					</li>
 					<li>
 						<h4>plugmystore</h4>
+						<h5>Avril 2014 - Aout 2014</h5>
 						<div class="detail">
-							<div>Avril 2014 - Aout 2014</div>
-							<div>Développeur</div>
+							<h5>Développeur</h5>
 							<div>Intégration de sites d'e-commerce</div>
 							<div>Développement et maintenance de fonctionnalités. Intégrations de plateformes d'e-commerce</div>
 						</div>
@@ -273,36 +241,5 @@
 			</div>
 		</div>
 	</div>
-
-
-	<script type="text/javascript">
-		function ajax(url, callback, options) {
-			if (typeof callback != 'function') {
-				options = callback
-				callback = undefined
-			}
-
-			options = options || {}
-			options.method = options.method || 'GET'
-
-			var httpRequest = new XMLHttpRequest()
-
-			if (httpRequest) {
-				httpRequest.onreadystatechange = function() {
-					if (httpRequest.readyState === XMLHttpRequest.DONE) {
-						if (httpRequest.status === 200) {
-							if (callback) callback(httpRequest.responseText);
-						} else {
-							console.warn('There was a problem with the request.')
-						}
-					}
-				}
-				httpRequest.open(options.method, url)
-				httpRequest.send()
-			} else {
-				console.warn('Giving up :( Cannot create an XMLHTTP instance')
-			}
-		}
-	</script>
 </body>
 </html>
