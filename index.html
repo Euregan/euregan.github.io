@@ -8,6 +8,7 @@
 		body {
 			background-color: #E8E8E7;
 			font-family: 'Roboto', sans-serif;
+			color: #555459;
 		}
 
 		#content { 
@@ -57,7 +58,7 @@
 		}
 
 		#personal, #personal a {
-			color: #FFF;
+			color: white;
 		}
 
 		#personal a {
@@ -77,11 +78,11 @@
 		}
 
 		#skills, #experiences {
-			background-color: #FFF;
+			background-color: white;
 		}
 
 		#description h1, #description h2, #description h3, #description h4 {
-			color: #468FCD;
+			color: black;
 		}
 
 		.icon {
@@ -97,6 +98,44 @@
 
 		table {
 			width: 100%;
+		}
+
+		label {
+			cursor: pointer;
+		}
+
+		label:after, input:checked + label:after {
+			content: '∨';
+			width: 16px;
+			height: 16px;
+			margin-left: 5px;
+			font-weight: bold;
+			color: #468FCD;
+		}
+
+		input:checked + label:after {
+			content: '∧';
+		}
+
+		input[type=checkbox] {
+			display: none;
+		}
+
+		label:hover {
+			color: #468FCD;
+		}
+
+		label + ul {
+			overflow: hidden;
+			height: 0px;
+		}
+
+		input:checked + label + ul {
+			height: auto;
+		}
+
+		tr {
+			vertical-align: top;
 		}
 	</style>
 </head>
@@ -140,16 +179,50 @@
 						<td id="languages">
 							<h4>Langages</h4>
 							<ul>
-								<li>Javascript</li>
-								<li>PHP</li>
-								<li>C# & VB</li>
+								<li>
+									<input type="checkbox" id="js">
+									<label for="js">Javascript</label>
+									<ul>
+										<li>React</li>
+										<li>jQuery</li>
+										<li>Express</li>
+									</ul>
+								</li>
+								<li>
+									<input type="checkbox" id="php">
+									<label for="php">PHP</label>
+									<ul>
+										<li>Zend Framework 2</li>
+										<li>Doctrine</li>
+										<li>Laravel</li>
+									</ul>
+								</li>
+								<li>
+									<input type="checkbox" id="ms">
+									<label for="ms">C# & VB</label>
+									<ul>
+										<li>WPF</li>
+										<li>ASP.NET</li>
+										<li>Silverlight</li>
+										<li>WinForm</li>
+									</ul>
+								</li>
+								<li>Shell</li>
 							</ul>
 						</td>
 
 						<td id="databases">
 							<h4>Bases de données</h4>
 							<ul>
-								<li>SQL</li>
+								<li>
+									<input type="checkbox" id="sql">
+									<label for="sql">SQL</label>
+									<ul>
+										<li>MySQL</li>
+										<li>SQLite</li>
+										<li>MS SQL</li>
+									</ul>
+								</li>
 								<li>MongoDB</li>
 							</ul>
 						</td>
