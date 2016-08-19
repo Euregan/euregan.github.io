@@ -72,7 +72,7 @@
 			background-color: #616161;
 		}
 
-		#network {
+		#network, #filters {
 			background-color: #468FCD;
 		}
 
@@ -93,6 +93,10 @@
 
 		.detail {
 			padding-left: 2em;
+		}
+
+		table {
+			width: 100%;
 		}
 	</style>
 </head>
@@ -117,44 +121,58 @@
 					<li><a href="https://github.com/euregan"><img src="img/github.png" class="icon"/>Github</a></li>
 				</ul>
 			</div>
+
+			<!--<div class="brick" id="filters">
+				<h3>Poste</h3>
+				<ul>
+					<li><label><input type="checkbox">Développeur frontend</label></li>
+					<li><label><input type="checkbox">Développeur backend</label></li>
+				</ul>
+			</div> -->
 		</div>
 
 		<div id="description">
-<!-- 			<div class="brick" id="about">
-				<h3>Présentation</h3>
-
-				
-			</div> -->
-
 			<div class="brick" id="skills">
 				<h3>Compétences</h3>
 
-				<div id="languages">
-					<h4>Langages</h4>
-					<ul>
-						<li>Javascript</li>
-						<li>PHP</li>
-						<li>C# & VB</li>
-					</ul>
+				<table>
+					<tr>
+						<td id="languages">
+							<h4>Langages</h4>
+							<ul>
+								<li>Javascript</li>
+								<li>PHP</li>
+								<li>C# & VB</li>
+							</ul>
+						</td>
 
-					<h4>Plateformes</h4>
-					<ul>
-						<li>Linux</li>
-						<li>Windows</li>
-					</ul>
+						<td id="databases">
+							<h4>Bases de données</h4>
+							<ul>
+								<li>SQL</li>
+								<li>MongoDB</li>
+							</ul>
+						</td>
+					</tr>
 
-					<h4>Serveurs</h4>
-					<ul>
-						<li>Apache 2</li>
-						<li>Node</li>
-					</ul>
+					<tr>
+						<td id="os">
+							<h4>Plateformes</h4>
+							<ul>
+								<li>Linux</li>
+								<li>Windows</li>
+							</ul>
+						</td>
 
-					<h4>Bases de données</h4>
-					<ul>
-						<li>SQL</li>
-						<li>MongoDB</li>
-					</ul>
-				</div>
+						<td id="servers">
+							<h4>Serveurs</h4>
+							<ul>
+								<li>Apache 2</li>
+								<li>Node</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
 			</div>
 
 			<div class="brick" id="experiences">
