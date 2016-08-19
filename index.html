@@ -5,119 +5,7 @@
 	<title>Valentin Manceaux-Panot</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-	<style type="text/css">
-		body {
-			background-color: #E8E8E7;
-			font-family: 'Roboto', sans-serif;
-			color: #555459;
-		}
-
-		#content { 
-		    max-width: 1366px;
-		    margin: auto;
-		}
-
-		h1, h2, h3, h4 {
-			font-family: arial;
-		}
-
-		h3 {
-			padding-bottom: 1em;
-			border-bottom: 2px solid #CBCBCB;
-		}
-
-		h4 {
-			margin: 0px;
-			padding: 0px;
-		}
-
-		ul {
-			list-style: none;
-		}
-
-		.brick {
-		    display: inline-block;
-		    margin: 0 0 1em;
-		    width: 100%;
-			border: solid 1px #CBCBCB;
-		}
-
-		.brick > * {
-			padding: 16px;
-			margin: 0px;
-		}
-
-		#personal {
-			width: 350px;
-			float: left;
-		}
-
-		#description {
-			margin-left: 380px;
-			max-width: 986px;
-		}
-
-		#personal, #personal a {
-			color: white;
-		}
-
-		#personal a {
-			text-decoration: none;
-		}
-
-		#personal a:hover {
-			text-decoration: underline;
-		}
-
-		#profile {
-			background-color: #616161;
-		}
-
-		#network, #filters {
-			background-color: #468FCD;
-		}
-
-		#skills, #experiences, #diplomas {
-			background-color: white;
-		}
-
-		#description h1, #description h2, #description h3, #description h4 {
-			color: black;
-		}
-
-		.icon {
-			max-width: 1em;
-			max-height: 1em;
-			margin-right: 0.25em;
-			vertical-align: middle;
-		}
-
-		.detail {
-			padding-left: 2em;
-			margin-top: 1em;
-			margin-bottom: 1em;
-		}
-
-		table {
-			width: 100%;
-		}
-
-		label {
-			cursor: pointer;
-		}
-
-		input[type=checkbox] {
-		}
-
-		tr {
-			vertical-align: top;
-		}
-
-		h5 {
-			margin-top: 0px;
-			margin-bottom: 0px;
-		}
-	</style>
+	<link rel="stylesheet" href="resume.css" charset="utf-8">
 </head>
 <body>
 	<div id="content">
@@ -144,9 +32,10 @@
 			<div class="brick" id="filters">
 				<h3>Postes</h3>
 				<ul>
-					<li><label><input type="radio" name="job" id="front">Développeur frontend</label></li>
-					<li><label><input type="radio" name="job" id="back">Développeur backend</label></li>
-					<li hidden><label><input type="radio" name="job" id="desktop">Développeur application bureau</label></li>
+					<li><input type="radio" name="job" id="web" checked><label for="web">Développeur web</label></li>
+					<li><input type="radio" name="job" id="front"><label for="front">Développeur frontend</label></li>
+					<li><input type="radio" name="job" id="back"><label for="back">Développeur backend</label></li>
+					<li hidden><input type="radio" name="job" id="desktop"><label for="desktop">Développeur application bureau</label></li>
 				</ul>
 			</div>
 		</div>
@@ -160,65 +49,65 @@
 						<td id="languages">
 							<h4>Langages</h4>
 							<ul>
-								<li class='back front'>
+								<li class='back front web'>
 									<h5>Javascript</h5>
 									<ul>
-										<li class='front'>React</li>
-										<li class='front'>jQuery</li>
-										<li class='back'>Express</li>
+										<li class='front web'>React</li>
+										<li class='front web'>jQuery</li>
+										<li class='back web'>Express</li>
 									</ul>
 								</li>
-								<li class='back'>
+								<li class='back web'>
 									<h5>PHP</h5>
 									<ul>
-										<li class='back'>Zend Framework 2</li>
-										<li class='back'>Doctrine</li>
-										<li class='back'>Laravel</li>
+										<li class='back web'>Zend Framework 2</li>
+										<li class='back web'>Doctrine</li>
+										<li class='back web'>Laravel</li>
 									</ul>
 								</li>
-								<li class='back front'>
+								<li class='back front web'>
 									<h5>C# & VB</h5>
 									<ul>
-										<li class='back'>ASP.NET</li>
-										<li class='front'>Silverlight</li>
-										<li class='desktop'>WPF</li>
-										<li class='desktop'>WinForm</li>
+										<li class='back web'>ASP.NET</li>
+										<li class='front web'>Silverlight</li>
+										<li class='desktop web'>WPF</li>
+										<li class='desktop web'>WinForm</li>
 									</ul>
 								</li>
-								<li class='back'><h5>Shell</h5></li>
+								<li class='back web'><h5>Shell</h5></li>
 							</ul>
 						</td>
 
 						<td id="databases">
-							<h4 class='back'>Bases de données</h4>
-							<ul class='back'>
+							<h4 class='back web'>Bases de données</h4>
+							<ul class='back web'>
 								<li>
 									<h5 for="sql">SQL</h5>
 									<ul>
-										<li class='back'>MySQL</li>
-										<li class='back'>SQLite</li>
-										<li class='back'>MS SQL</li>
+										<li class='back web'>MySQL</li>
+										<li class='back web'>SQLite</li>
+										<li class='back web'>MS SQL</li>
 									</ul>
 								</li>
-								<li class='back'><h5>MongoDB</h5></li>
+								<li class='back web'><h5>MongoDB</h5></li>
 							</ul>
 						</td>
 					</tr>
 
 					<tr>
 						<td id="os">
-							<h4 class='back'>Plateformes</h4>
-							<ul class='back'>
+							<h4 class='back web'>Plateformes</h4>
+							<ul class='back web'>
 								<li><h5>Linux</h5></li>
 								<li><h5>Windows</h5></li>
 							</ul>
 						</td>
 
 						<td id="servers">
-							<h4 class='back'>Serveurs</h4>
-							<ul class='back'>
-								<li class='back'><h5>Apache 2</h5></li>
-								<li class='back'><h5>Node</h5></li>
+							<h4 class='back web'>Serveurs</h4>
+							<ul class='back web'>
+								<li class='back web'><h5>Apache 2</h5></li>
+								<li class='back web'><h5>Node</h5></li>
 							</ul>
 						</td>
 					</tr>
@@ -279,7 +168,7 @@
 		var hidden = []
 
 		//We parse the state of the filters
-		$('#filters input[type=radio]').each(function(index, radio) { 
+		$('#filters input[type=radio]').each(function(index, radio) {
 			if (radio.checked) shown.push(radio.id)
 			else hidden.push(radio.id)
 		})
