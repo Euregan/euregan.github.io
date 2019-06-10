@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="What’s static typing ?Typing in programming languages (PL) can be defined along two axes :  Strong vs Weak Static vs Dynamic  Strong vs WeakThe more strongly typed a PL is, the less implicit conversio">
+    <meta name="description" content="What is static typing?Typing in programming languages (PL) can be defined along two axes:  Strong vs Weak Static vs Dynamic  Strong vs WeakThe more strongly typed a PL is, the less implicit conversion">
 <meta property="og:type" content="article">
 <meta property="og:title" content="static typing">
 <meta property="og:url" content="http://valentin.mcxp.io/2019/06/10/static-typing/index.html">
 <meta property="og:site_name" content="Valentin Manceaux-Panot">
-<meta property="og:description" content="What’s static typing ?Typing in programming languages (PL) can be defined along two axes :  Strong vs Weak Static vs Dynamic  Strong vs WeakThe more strongly typed a PL is, the less implicit conversio">
+<meta property="og:description" content="What is static typing?Typing in programming languages (PL) can be defined along two axes:  Strong vs Weak Static vs Dynamic  Strong vs WeakThe more strongly typed a PL is, the less implicit conversion">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-10T07:13:32.172Z">
+<meta property="og:updated_time" content="2019-06-10T08:56:17.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="static typing">
-<meta name="twitter:description" content="What’s static typing ?Typing in programming languages (PL) can be defined along two axes :  Strong vs Weak Static vs Dynamic  Strong vs WeakThe more strongly typed a PL is, the less implicit conversio">
+<meta name="twitter:description" content="What is static typing?Typing in programming languages (PL) can be defined along two axes:  Strong vs Weak Static vs Dynamic  Strong vs WeakThe more strongly typed a PL is, the less implicit conversion">
     
     
         
@@ -96,7 +96,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What’s-static-typing"><span class="toc-number">1.</span> <span class="toc-text">What’s static typing ?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Strong-vs-Weak"><span class="toc-number">1.1.</span> <span class="toc-text">Strong vs Weak</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Static-vs-Dynamic"><span class="toc-number">1.2.</span> <span class="toc-text">Static vs Dynamic</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What’s-the-point-of-it"><span class="toc-number">2.</span> <span class="toc-text">What’s the point of it ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-don’t-everybody-use-it-then"><span class="toc-number">3.</span> <span class="toc-text">Why don’t everybody use it then ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Should-I-use-it"><span class="toc-number">4.</span> <span class="toc-text">Should I use it ?</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-static-typing"><span class="toc-number">1.</span> <span class="toc-text">What is static typing?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Strong-vs-Weak"><span class="toc-number">1.1.</span> <span class="toc-text">Strong vs Weak</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Static-vs-Dynamic"><span class="toc-number">1.2.</span> <span class="toc-text">Static vs Dynamic</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What’s-the-point-of-it"><span class="toc-number">2.</span> <span class="toc-text">What’s the point of it?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-don’t-everybody-use-it-then"><span class="toc-number">3.</span> <span class="toc-text">Why don’t everybody use it then?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Should-I-use-it"><span class="toc-number">4.</span> <span class="toc-text">Should I use it?</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -120,7 +120,7 @@
       
     <div class="postdate">
       
-        <time datetime="2019-06-10T07:13:17.771Z" itemprop="datePublished">2019-06-10</time>
+        <time datetime="2019-06-10T07:32:45.000Z" itemprop="datePublished">2019-06-10</time>
         
       
     </div>
@@ -135,25 +135,25 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="What’s-static-typing"><a href="#What’s-static-typing" class="headerlink" title="What’s static typing ?"></a>What’s static typing ?</h2><p>Typing in programming languages (PL) can be defined along two axes :</p>
+    <h2 id="What-is-static-typing"><a href="#What-is-static-typing" class="headerlink" title="What is static typing?"></a>What is static typing?</h2><p>Typing in programming languages (PL) can be defined along two axes:</p>
 <ul>
 <li>Strong vs Weak</li>
 <li>Static vs Dynamic</li>
 </ul>
-<h3 id="Strong-vs-Weak"><a href="#Strong-vs-Weak" class="headerlink" title="Strong vs Weak"></a>Strong vs Weak</h3><p>The more strongly typed a PL is, the less implicit conversions from one type to another there are. A simple example to that is with string and integer conversion : In a strongly typed PL, it will be impossible to directly concatenate a string with an integer, you will first have to convert the integer into a string.</p>
-<p>Even in a weakly typed language there are limitations : The computer cannot invent the way you could want to concatenate an object and an integer for example. So while this difference exists, it’s mainly limited to scalar types, and as such is of limited interest beyond the ease of use when trying to concatenate values into a string.</p>
-<h3 id="Static-vs-Dynamic"><a href="#Static-vs-Dynamic" class="headerlink" title="Static vs Dynamic"></a>Static vs Dynamic</h3><p>Static and dynamic typing however have deep implications for the way the language is used. In a statically typed language, type checking happens before runtime, which is, most of the time, the compilation step. Dynamic typing however checks at runtime, meaning that there is no waiting time before running a program.</p>
+<h3 id="Strong-vs-Weak"><a href="#Strong-vs-Weak" class="headerlink" title="Strong vs Weak"></a>Strong vs Weak</h3><p>The more strongly typed a PL is, the less implicit conversions from one type to another there are. A simple example to that is with string and integer conversion: in a strongly typed PL, it would be impossible to directly concatenate a string with an integer, you would first have to convert the integer into a string.</p>
+<p>Even in a weakly typed language there are limitations: the computer cannot invent the way you could want to concatenate an object and an integer for example. So while this difference exists, it’s mainly limited to scalar types, and as such is of limited interest beyond the ease of use when trying to concatenate values into a string.</p>
+<h3 id="Static-vs-Dynamic"><a href="#Static-vs-Dynamic" class="headerlink" title="Static vs Dynamic"></a>Static vs Dynamic</h3><p>Static and dynamic typing however have deep implications for the way the language is used. In a statically typed language, type checking happens before runtime, which is, most of the time, the compilation step. Dynamic typing however checks at runtime, meaning there is no waiting time before running a program.</p>
 <p>Note that every language is typed, though some allow you not to specify a variable’s type, leading to the impression that the language is not typed.</p>
-<h2 id="What’s-the-point-of-it"><a href="#What’s-the-point-of-it" class="headerlink" title="What’s the point of it ?"></a>What’s the point of it ?</h2><p>Now, you may wonder, if all languages are typed, and if all of them type check anyway, why bother with a pre-runtime step when it could all be done seamlessly in one go ?</p>
-<p>The whole point of static typing is specifically that : Add a step before runtime where the computer makes sure that the types are valid. While it may be a bother when developing, the added security it provides in production is worth the wait. Indeed, type errors won’t even reach production ever, since they will be preventing the building of the program.</p>
-<p>Static typing, even when it’s weak, prevents from making all kind of mistakes, like passing wrong parameters to a function. It even leads to a specific kind of programming, called type level programming, which helps reduce even more runtime problems.</p>
-<p>Types are also pretty great at providing documentation. Functions parameters behind typed means another layer of information when reading code and same goes for variables. Type declaration make the Hungarian notation pretty obsolete, since the type is already specified. It also helps with autocompletion in IDEs.</p>
-<h2 id="Why-don’t-everybody-use-it-then"><a href="#Why-don’t-everybody-use-it-then" class="headerlink" title="Why don’t everybody use it then ?"></a>Why don’t everybody use it then ?</h2><p>Static typing being so useful, everybody should use them right ? Well, no. A first barrier to its adoption comes from the legacy systems : If your program is written in a non statically typed language, it can be hard to just throw everything away and start anew. </p>
-<p>Statically typed languages are also often seen as complex languages, with the typing getting in the way, which leads many developers to prefer dynamic languages. The complexity of statically typed languages can come from different parts, such as compilation error messages behind cryptic, or the concepts behind the language being hard to grasp (Which is essentially true for functional programming).</p>
+<h2 id="What’s-the-point-of-it"><a href="#What’s-the-point-of-it" class="headerlink" title="What’s the point of it?"></a>What’s the point of it?</h2><p>Now, if all languages are typed, and if all of them type check anyway, why bother with a pre-runtime step when it could all be done seamlessly in one go?</p>
+<p>The whole point of static typing is specifically that: add a step before runtime where the computer makes sure that the types are valid. While the added overhead may be a bother when developing, the added security it provides in production is worth the wait. Indeed, type errors won’t even ever reach production, since they will be halting the building of the program.</p>
+<p>Static typing, even when it’s weak, prevents the developer from making all kinds of mistakes, like passing incorrect parameters to a function. It even leads to a specific kind of programming, called type level programming, which helps reduce even more runtime problems.</p>
+<p>Types are also pretty great at providing documentation. Functions parameters being typed means there is another layer of information when reading code, and the same goes for variables. Type declaration make Hungarian notation pretty obsolete, since the type is already specified. It also helps with autocompletion in IDEs.</p>
+<h2 id="Why-don’t-everybody-use-it-then"><a href="#Why-don’t-everybody-use-it-then" class="headerlink" title="Why don’t everybody use it then?"></a>Why don’t everybody use it then?</h2><p>Static typing being so useful, everybody should use them, right? Well, no. A first barrier to its adoption comes from legacy systems: if your program is written in a non statically typed language, it can be hard to just throw everything away and start anew. </p>
+<p>Statically typed languages are also often seen as complex languages, with the typing getting in the way, which leads many developers to prefer dynamic languages. The complexity of statically typed languages can come from different parts, such as compilation error messages being cryptic, or the concepts behind the language being hard to grasp (which is essentially true for functional programming).</p>
 <p>While this remains true, it also mainly comes from a lack of experience in using type systems and static type languages. Still, old habits die hard, and if you’re used to dynamic types, it can be hard to switch to static ones. </p>
-<h2 id="Should-I-use-it"><a href="#Should-I-use-it" class="headerlink" title="Should I use it ?"></a>Should I use it ?</h2><p>It really depends on your needs. A project will be faster to develop using a dynamically typed language, because you won’t have as much boilerplate to specify types, including the edge cases. Inheritance can especially get in the way with static typing in some languages. The lack of a compilation step also enable shorter feedback loops when testing out new features.</p>
-<p>However, nowadays, even dynamic languages sometimes use a compilation, or build, step. And since the language itself has not been thought to be used this way, those steps are often slower than their equivalent in statically typed languages, who’ve had years of refining and optimization.</p>
-<p>If your project has to be maintained and upgraded over a long period of time, by multiple developers, some of which arriving after the start of the development, then it could be a really good idea to use a statically typed language. The safety provided and the implicit documentation provides straight forward benefits that will greatly help easing in newcomers, and will support long term maintenance.</p>
+<h2 id="Should-I-use-it"><a href="#Should-I-use-it" class="headerlink" title="Should I use it?"></a>Should I use it?</h2><p>It really depends on your needs. A project will be faster to develop using a dynamically typed language, because you won’t have as much boilerplate to specify types, including the edge cases. Inheritance can especially get in the way when paired with static typing in some languages. The lack of a compilation step also enable shorter feedback loops when testing out new features.</p>
+<p>However, nowadays, even dynamic languages sometimes use a compilation, or build, step. And since the language itself has not been designed to be used this way, those steps are often slower than their equivalent in statically typed languages, who’ve had years of refining and optimization.</p>
+<p>If your project has to be maintained and upgraded over a long period of time, by multiple developers, some of which arriving after the start of the development, then it could be a really good idea to use a statically typed language. The safety provided and the implicit documentation provides straightforward benefits that will greatly help easing in newcomers, and will support long term maintenance.</p>
 
   </div>
 </article>
@@ -175,7 +175,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What’s-static-typing"><span class="toc-number">1.</span> <span class="toc-text">What’s static typing ?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Strong-vs-Weak"><span class="toc-number">1.1.</span> <span class="toc-text">Strong vs Weak</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Static-vs-Dynamic"><span class="toc-number">1.2.</span> <span class="toc-text">Static vs Dynamic</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What’s-the-point-of-it"><span class="toc-number">2.</span> <span class="toc-text">What’s the point of it ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-don’t-everybody-use-it-then"><span class="toc-number">3.</span> <span class="toc-text">Why don’t everybody use it then ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Should-I-use-it"><span class="toc-number">4.</span> <span class="toc-text">Should I use it ?</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-static-typing"><span class="toc-number">1.</span> <span class="toc-text">What is static typing?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Strong-vs-Weak"><span class="toc-number">1.1.</span> <span class="toc-text">Strong vs Weak</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Static-vs-Dynamic"><span class="toc-number">1.2.</span> <span class="toc-text">Static vs Dynamic</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What’s-the-point-of-it"><span class="toc-number">2.</span> <span class="toc-text">What’s the point of it?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-don’t-everybody-use-it-then"><span class="toc-number">3.</span> <span class="toc-text">Why don’t everybody use it then?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Should-I-use-it"><span class="toc-number">4.</span> <span class="toc-text">Should I use it?</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
